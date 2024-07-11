@@ -1,4 +1,4 @@
-<div class="container my-4">
+<div class="container-md my-4">
   <div class="card">
     <h5 class="card-header">Users</h5>
     <div class="card-body">
@@ -24,7 +24,12 @@
             <td class="hide-on-small-email">{{ user.email }}</td>
             <td class="hide-on-small">{{ user.company.name }}</td>
             <td>
-              <button class="btn btn-sm btn-success">posts</button>
+              <button
+                class="btn btn-sm btn-success"
+                (click)="usersUniquePosts(user.id)"
+              >
+                posts
+              </button>
             </td>
           </tr>
         </ng-template>
