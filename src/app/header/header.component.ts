@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -8,6 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.css',
 })
 export class HeaderComponent {
+  router = new Router();
   menuValue: boolean = false;
   menu_icon: string = 'bi bi-list';
 
@@ -19,5 +21,9 @@ export class HeaderComponent {
   openMenu() {
     this.menuValue = !this.menuValue;
     this.menu_icon = this.menuValue ? 'bi bi-x' : 'bi bi-list';
+  }
+
+  redirectToHome() {
+    this.router.navigate(['/']);
   }
 }

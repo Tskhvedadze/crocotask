@@ -1,9 +1,14 @@
 <header>
-  <div class="container">
+  <div class="container-md">
     <div class="row">
       <div class="col-md-3 col-sm-3 col-3">
         <div class="logo-container">
-          <img src="assets/hano_logo.png" alt="" class="logo" />
+          <img
+            src="assets/hano_logo.png"
+            alt="logo"
+            class="logo"
+            (click)="redirectToHome()"
+          />
         </div>
       </div>
       <div class="col-md-9 col-sm-9 col-9 text-end">

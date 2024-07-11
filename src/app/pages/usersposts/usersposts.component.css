@@ -1,0 +1,23 @@
+.wrapper {
+  display: grid;
+  gap: 12px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .wrapper {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

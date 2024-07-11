@@ -39,6 +39,7 @@ header {
     transition: 0.4s ease-in-out;
     top: 64px;
     background: #02534d;
+    z-index: 1000;
     width: 280px;
     height: 100%;
   }

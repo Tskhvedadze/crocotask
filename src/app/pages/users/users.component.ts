@@ -4,6 +4,8 @@ import { Users } from '../../services/user.model';
 import { CommonModule } from '@angular/common';
 import { TableComponent } from '../../shared/table/table.component';
 
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-users',
   standalone: true,
@@ -12,8 +14,13 @@ import { TableComponent } from '../../shared/table/table.component';
   styleUrl: './users.component.css',
 })
 export class UsersComponent implements OnInit {
+  router = new Router();
   users: Users[] = [];
   constructor(private userService: UsersService) {}
+
+  usersUniquePosts(userId: number) {
+    this.router.navigate(['usersUniquePosts', userId]);
+  }
 
   ngOnInit(): void {
     this.getUsers();
@@ -22,8 +29,6 @@ export class UsersComponent implements OnInit {
   getUsers() {
     this.userService.getUser().subscribe({
       next: (users) => {
-        console.log(users);
-
         this.users = users;
       },
     });
