@@ -1,0 +1,34 @@
+<div class="container my-4">
+  <div class="card">
+    <h5 class="card-header">Users</h5>
+    <div class="card-body">
+      <app-table
+        [tableHead]="theadTemplate"
+        [tableBody]="tbodyTemplate"
+        [data]="users"
+      >
+        <ng-template #theadTemplate>
+          <tr>
+            <th>ID</th>
+            <th>User</th>
+            <th>Phone</th>
+            <th class="hide-on-small-email">Email</th>
+            <th class="hide-on-small">Company</th>
+          </tr>
+        </ng-template>
+        <ng-template let-user #tbodyTemplate>
+          <tr>
+            <td>{{ user.id }}</td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.phone }}</td>
+            <td class="hide-on-small-email">{{ user.email }}</td>
+            <td class="hide-on-small">{{ user.company.name }}</td>
+            <td>
+              <button class="btn btn-sm btn-success">posts</button>
+            </td>
+          </tr>
+        </ng-template>
+      </app-table>
+    </div>
+  </div>
+</div>
