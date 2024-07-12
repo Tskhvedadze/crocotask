@@ -23,12 +23,18 @@
             <td>{{ user.phone }}</td>
             <td class="hide-on-small-email">{{ user.email }}</td>
             <td class="hide-on-small">{{ user.company.name }}</td>
-            <td>
+            <td class="td-button">
               <button
                 class="btn btn-sm btn-success"
                 (click)="usersUniquePosts(user.id)"
               >
                 posts
+              </button>
+              <button
+                class="btn btn-sm btn-secondary"
+                (click)="usersTodos(user.id)"
+              >
+                todo
               </button>
             </td>
           </tr>
