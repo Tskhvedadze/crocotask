@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { TableComponent } from '../table/table.component';
 
 import { Router } from '@angular/router';
+import { Todos } from '../../services/todos.service';
 
 @Component({
   selector: 'app-users',
@@ -16,10 +17,14 @@ import { Router } from '@angular/router';
 export class UsersComponent implements OnInit {
   router = new Router();
   users: Users[] = [];
-  constructor(private userService: UsersService) {}
+  todos: any[] = [];
+  constructor(private userService: UsersService, todosService: Todos) {}
 
   usersUniquePosts(userId: number) {
     this.router.navigate(['usersUniquePosts', userId]);
+  }
+  usersTodos(userId: number) {
+    this.router.navigate(['usersTodos', userId]);
   }
 
   ngOnInit(): void {

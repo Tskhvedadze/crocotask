@@ -22,7 +22,6 @@ export class UsersPageComponent implements OnInit {
     this.allUsersService.getAllPosts().subscribe({
       next: (response) => {
         this.users = response;
-        console.log(this.users[0]);
       },
       error: (err) => console.log('Error fetching users', err),
     });

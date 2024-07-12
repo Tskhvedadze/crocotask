@@ -1,0 +1,11 @@
+<div class="wrapper my-4 container-md text-center">
+  <div
+    class="card"
+    *ngFor="let todo of todos"
+    [ngClass]="{ completed: todo.completed }"
+  >
+    <div class="card-body">
+      <p>{{ todo.title }}</p>
+    </div>
+  </div>
+</div>
