@@ -17,8 +17,8 @@
         </div>
         <div class="desktop_menu" [class.mobile_menu]="menuValue">
           <ul>
-            <li (click)="closeMenu()">Users</li>
-            <li (click)="closeMenu()">Posts</li>
+            <li (click)="closeMenuAndNavigateTo('users')">Users</li>
+            <li (click)="closeMenuAndNavigateTo('posts')">Posts</li>
           </ul>
         </div>
       </div>
