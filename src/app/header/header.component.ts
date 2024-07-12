@@ -13,6 +13,11 @@ export class HeaderComponent {
   menuValue: boolean = false;
   menu_icon: string = 'bi bi-list';
 
+  closeMenuAndNavigateTo(route: string) {
+    this.closeMenu();
+    this.router.navigate([route]);
+  }
+
   closeMenu() {
     this.menuValue = false;
     this.menu_icon = 'bi bi-list';

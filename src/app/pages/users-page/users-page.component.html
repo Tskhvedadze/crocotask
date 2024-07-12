@@ -1,0 +1,39 @@
+<div class="container-md my-4 wrapper">
+  <div class="card" style="width: 18rem" *ngFor="let user of users">
+    <div class="card-body">
+      <h5 class="card-title">{{ user.name }}</h5>
+      <p class="card-text mb-0">
+        {{ user.company.catchPhrase }}
+      </p>
+      <p class="card-text">
+        {{ user.company.bs }}
+      </p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        <dt class="dt">Username:</dt>
+        {{ user.username }}
+      </li>
+      <li class="list-group-item">
+        <dt class="dt">Phone:</dt>
+        {{ user.phone }}
+      </li>
+      <li class="list-group-item">
+        <dt class="dt">Email:</dt>
+        {{ user.email }}
+      </li>
+      <li class="list-group-item">
+        <dt class="dt">City:</dt>
+        {{ user.address.city }}
+      </li>
+      <li class="list-group-item">
+        <dt class="dt">Street:</dt>
+        {{ user.address.street }}
+      </li>
+      <li class="list-group-item">
+        <dt class="dt">company:</dt>
+        {{ user.company.name }}
+      </li>
+    </ul>
+  </div>
+</div>

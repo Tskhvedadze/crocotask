@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UsersService } from '../../services/users.service';
 import { Users } from '../../services/user.model';
 import { CommonModule } from '@angular/common';
-import { TableComponent } from '../../shared/table/table.component';
+import { TableComponent } from '../table/table.component';
 
 import { Router } from '@angular/router';
 
